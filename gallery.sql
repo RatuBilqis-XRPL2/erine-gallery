@@ -1,0 +1,326 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: May 11, 2026 at 04:30 AM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.0.30
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `erine_gallery`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `gallery`
+--
+
+CREATE TABLE `gallery` (
+  `id` int(11) NOT NULL,
+  `title` varchar(100) DEFAULT NULL,
+  `image` varchar(255) DEFAULT NULL,
+  `category` enum('daily','fancam','friends','photobook','on_offair') DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `gallery`
+--
+
+INSERT INTO `gallery` (`id`, `title`, `image`, `category`, `created_at`) VALUES
+(1, 'Hijab', 'daily1.jpg', 'daily', '2026-05-06 08:15:50'),
+(2, 'Rambut Ayam', 'daily2.jpg', 'daily', '2026-05-06 08:16:07'),
+(3, 'Cookis', 'daily3.jpg', 'daily', '2026-05-06 08:16:20'),
+(4, 'Kacamata', 'daily4.jpg', 'daily', '2026-05-06 08:16:34'),
+(5, 'Alam', 'daily5.jpg', 'daily', '2026-05-06 08:16:47'),
+(6, 'Topi', 'daily6.jpg', 'daily', '2026-05-06 08:17:00'),
+(7, 'Pantai', 'daily7.jpg', 'daily', '2026-05-06 08:17:13'),
+(8, 'Cardigan', 'daily8.jpg', 'daily', '2026-05-06 08:17:36'),
+(9, 'Cafe', 'daily9.jpg', 'daily', '2026-05-06 08:17:51'),
+(10, 'Bebek', 'daily10.jpg', 'daily', '2026-05-06 08:18:05'),
+(11, 'Manyun', 'daily11.jpg', 'daily', '2026-05-06 08:18:18'),
+(12, 'Bunga', 'daily12.jpg', 'daily', '2026-05-06 08:18:30'),
+(13, 'Cafe Dinner', 'daily13.jpg', 'daily', '2026-05-06 08:18:47'),
+(14, 'Dasi Daily', 'daily14.jpg', 'daily', '2026-05-06 08:19:30'),
+(15, 'Dress', 'daily15.jpg', 'daily', '2026-05-06 08:19:55'),
+(16, 'Kacamata', 'daily16.jpg', 'daily', '2026-05-06 08:20:09'),
+(17, 'Make Up', 'daily17.jpg', 'daily', '2026-05-06 08:21:36'),
+(18, 'Dress Hitam', 'daily18.jpg', 'daily', '2026-05-06 08:21:55'),
+(19, 'Jaket Daily', 'daily19.jpg', 'daily', '2026-05-06 08:22:13'),
+(20, 'Di Mobil', 'daily20.jpg', 'daily', '2026-05-06 08:22:33'),
+(21, 'Flower', 'daily21.jpg', 'daily', '2026-05-06 08:24:12'),
+(22, 'SSK', 'daily22.jpg', 'daily', '2026-05-06 08:25:07'),
+(23, 'Bebek', 'daily23.jpg', 'daily', '2026-05-06 08:25:19'),
+(24, 'Mobil', 'daily24.jpg', 'daily', '2026-05-06 08:25:32'),
+(25, 'Flower', 'daily25.jpg', 'daily', '2026-05-06 08:25:46'),
+(26, 'Baju Club Bola', 'daily26.jpg', 'daily', '2026-05-06 08:26:08'),
+(27, 'Pap Mukena', 'daily27.jpg', 'daily', '2026-05-06 08:26:23'),
+(28, 'Helloween Night', 'daily28.jpg', 'daily', '2026-05-06 08:28:26'),
+(29, 'Cafe', 'daily29.jpg', 'daily', '2026-05-06 08:28:43'),
+(30, 'Random Daily', 'daily30.jpg', 'daily', '2026-05-06 08:29:05'),
+(31, 'Mirror Selfie', 'daily31.jpg', 'daily', '2026-05-06 08:29:21'),
+(32, 'Erine-Aralie', 'Erine-Aralie.jpg', 'friends', '2026-05-06 08:35:58'),
+(40, 'Erine-Delynn', 'Erine-Delynn 2.jpg', 'friends', '2026-05-06 08:41:05'),
+(41, 'Erine-Delynn', 'Erine-Delynn.jpg', 'friends', '2026-05-06 08:42:55'),
+(42, 'Erine-Kimmy', 'Erine-Kimmy.jpg', 'friends', '2026-05-06 08:43:28'),
+(43, 'Erine-Lily', 'Erine-Lily.jpg', 'friends', '2026-05-06 08:43:44'),
+(44, 'Erine-Nachia', 'Erine-Nachia.jpg', 'friends', '2026-05-06 08:45:57'),
+(45, 'Erine-Nala', 'Erine-Nala 2.jpg', 'friends', '2026-05-06 08:47:19'),
+(46, 'Erine-Nala', 'Erine-Nala.jpg', 'friends', '2026-05-06 08:47:35'),
+(47, 'Erine-Regie', 'Erine-Regie.jpg', 'friends', '2026-05-06 08:47:53'),
+(48, 'Erine-Trisha', 'Erine-Trisha.jpg', 'friends', '2026-05-06 08:48:10'),
+(49, 'Gen 12', 'Gen12 (2).jpg', 'friends', '2026-05-06 08:48:28'),
+(50, 'Gen 12', 'Gen12 (3).jpg', 'friends', '2026-05-06 08:48:42'),
+(51, 'Gen 12', 'Gen12 (4).jpg', 'friends', '2026-05-06 08:49:07'),
+(52, 'Gen 12', 'Gen12 (5).jpg', 'friends', '2026-05-06 08:49:20'),
+(53, 'Gen 12', 'Gen12 (6).jpg', 'friends', '2026-05-06 08:49:39'),
+(54, 'Gen 12', 'Gen12 (7).jpg', 'friends', '2026-05-06 08:49:53'),
+(55, 'Gen 12', 'Gen12 (8).jpg', 'friends', '2026-05-06 08:50:20'),
+(56, 'Gen 12', 'Gen12 (9).jpg', 'friends', '2026-05-06 08:50:34'),
+(57, 'Gen 12', 'Gen12 (10).jpg', 'friends', '2026-05-06 08:51:01'),
+(58, 'Gen 12', 'Gen12 (11).jpg', 'friends', '2026-05-06 08:51:22'),
+(59, 'Gen 12', 'Gen12 (12).jpg', 'friends', '2026-05-06 08:51:40'),
+(60, 'Gen 12', 'Gen12 (13).jpg', 'friends', '2026-05-06 08:51:56'),
+(61, 'Erine-Trisha-Fritzy-Lily', 'Gen12 (14).jpg', 'friends', '2026-05-06 08:52:38'),
+(62, 'Erine-Nachia-Aralie-Kimmy', 'Gen12 (15).jpg', 'friends', '2026-05-06 08:53:09'),
+(63, 'Gen 12', 'Gen12 (16).jpg', 'friends', '2026-05-06 08:53:24'),
+(64, 'Erine-Aralie-Nala-Fritzy', 'Gen12.jpg', 'friends', '2026-05-06 08:54:23'),
+(65, 'Oline-Erine', 'Oline-Erine 2.jpg', 'friends', '2026-05-06 08:54:44'),
+(66, 'Oline-Erine', 'Oline-Erine 3.jpg', 'friends', '2026-05-06 08:55:02'),
+(67, 'Oline-Erine', 'Oline-Erine 4.jpg', 'friends', '2026-05-06 08:55:17'),
+(68, 'Oline-Erine', 'Oline-Erine 5.jpg', 'friends', '2026-05-06 08:55:32'),
+(69, 'Oline-Erine', 'Oline-Erine 6.jpg', 'friends', '2026-05-06 08:55:45'),
+(70, 'Oline-Erine', 'Oline-Erine.jpg', 'friends', '2026-05-06 08:56:01'),
+(71, 'Fancam Perkenalan', 'fancam1.jpg', 'fancam', '2026-05-06 09:01:33'),
+(76, 'On Air', 'fancam2.jpg', 'fancam', '2026-05-07 06:21:44'),
+(79, 'Off Air', 'fancam3.jpg', 'fancam', '2026-05-07 08:26:03'),
+(82, 'Event OFC', 'OFC1.jpg', 'on_offair', '2026-05-07 08:35:45'),
+(83, 'Photobook UG', 'Photobook_UG.jpg', 'photobook', '2026-05-07 08:36:46'),
+(84, 'Sonici Kira Kira Girls', 'fancam4.jpg', 'fancam', '2026-05-07 08:38:27'),
+(85, 'Off Air', 'fancam5.jpg', 'fancam', '2026-05-07 08:39:27'),
+(86, 'Off Air', 'fancam6.jpg', 'fancam', '2026-05-07 08:40:39'),
+(87, 'On Air', 'fancam7.jpg', 'fancam', '2026-05-07 08:42:00'),
+(88, 'Off Air', 'fancam8.jpg', 'fancam', '2026-05-07 08:42:20'),
+(89, 'Bandara', 'fancam9.jpg', 'fancam', '2026-05-07 08:43:16'),
+(90, 'Off Air', 'fancam10.jpg', 'fancam', '2026-05-07 08:44:00'),
+(91, 'Bandara', 'fancam11.jpg', 'fancam', '2026-05-07 08:44:43'),
+(92, 'bandara', 'fancam12.jpg', 'fancam', '2026-05-07 08:45:03'),
+(93, 'Off Air', 'fancam13.jpg', 'fancam', '2026-05-07 08:45:20'),
+(94, 'On Air', 'fancam14.jpg', 'fancam', '2026-05-07 08:45:40'),
+(95, 'Off Air', 'fancam16.jpg', 'fancam', '2026-05-07 08:46:14'),
+(96, 'On Air', 'fancam18.jpg', 'fancam', '2026-05-07 08:46:35'),
+(97, 'On Air', 'fancam19.jpg', 'fancam', '2026-05-07 08:46:52'),
+(98, 'Setlis Official', 'fancam21.jpg', 'fancam', '2026-05-07 08:47:38'),
+(99, 'Bandara', 'fancam22.jpg', 'fancam', '2026-05-07 08:49:19'),
+(100, 'Bandara', 'fancam23.jpg', 'fancam', '2026-05-07 08:49:41'),
+(101, 'Bandara', 'fancam24.jpg', 'fancam', '2026-05-07 08:50:35'),
+(102, 'Off Air', 'fancam25.jpg', 'fancam', '2026-05-07 08:51:25'),
+(103, 'Off Air', 'fancam26.jpg', 'fancam', '2026-05-07 08:52:01'),
+(104, 'On Air', 'fancam20.jpg', 'fancam', '2026-05-07 08:52:19'),
+(105, 'On Air', 'fancam17.jpg', 'fancam', '2026-05-07 08:52:35'),
+(106, 'Bandara', 'fancam15.jpg', 'fancam', '2026-05-07 08:52:51'),
+(107, 'Khabesa Trainee', 'Khabesa_Trainee.jpg', 'photobook', '2026-05-07 08:55:49'),
+(108, 'BTS MV Team Pession', 'Photobook BTS MV Team Pession 1.jpg', 'photobook', '2026-05-07 08:57:00'),
+(109, 'BTS MV Team Pession (2)', 'Photobook BTS MV Team Pession 2.jpg', 'photobook', '2026-05-07 08:57:44'),
+(110, 'BTS MV Team Pession (3)', 'Photobook BTS MV Team Pession 3.jpg', 'photobook', '2026-05-07 08:58:19'),
+(111, 'BTS MV Team Pession (4)', 'Photobook BTS MV Team Pession 4.jpg', 'photobook', '2026-05-07 08:58:50'),
+(112, 'Photobook Cake Version', 'Photobook_Cake Version.jpg', 'photobook', '2026-05-07 08:59:15'),
+(113, 'Photobook Detektif Version', 'Photobook_Detektif Version.jpg', 'photobook', '2026-05-07 08:59:59'),
+(114, 'Photobook Donat version', 'Photobook_Donat Version.jpg', 'photobook', '2026-05-07 09:00:26'),
+(115, 'Photobook Kalender', 'Photobook_Kalender 2.jpg', 'photobook', '2026-05-07 09:00:50'),
+(116, 'Photobook Kalender (2)', 'Photobook_Kalender.jpg', 'photobook', '2026-05-07 09:01:43'),
+(117, 'Photobook NKRI Version', 'Photobook_NKRI Indonesia Version.jpg', 'photobook', '2026-05-07 09:02:55'),
+(118, 'Photobook Go And Fight', 'Photobook_Singgel Go And Fight.jpg', 'photobook', '2026-05-07 09:03:46'),
+(119, 'Photobook Team T', 'Photobook_TeamT.jpg', 'photobook', '2026-05-07 09:04:13'),
+(120, 'Photobook Trainee', 'Photobook_Trainee.jpg', 'photobook', '2026-05-07 09:04:41'),
+(121, 'Photobook Wonderland', 'Photobook_Wonderland.jpg', 'photobook', '2026-05-07 09:05:10'),
+(122, 'Photobook Digital Wonderland', 'PhotobookDigital_Wonderland.jpg', 'photobook', '2026-05-07 09:05:48'),
+(123, 'Photobook MNG SSK', 'PhotobookMnG_SSK.jpg', 'photobook', '2026-05-07 09:06:30'),
+(124, 'Photopack SSK', 'Photopack_SSK.jpg', 'photobook', '2026-05-07 09:06:54'),
+(125, 'Profile Wonderland', 'Profile_Wonderland.jpg', 'photobook', '2026-05-07 09:07:18'),
+(126, 'Profile The First Snow', 'Profile_TheFirstSnow.jpg', 'photobook', '2026-05-07 09:08:03'),
+(127, 'Khabesa Member Inti', 'Khabesa_MemberInti.jpg', 'photobook', '2026-05-07 09:08:40'),
+(128, 'Photobook Ramadhan 2024', 'Photobook_Ramadhan2024.jpg', 'photobook', '2026-05-07 09:09:16'),
+(129, 'Photobook Ramadhan 2025', 'Photobook_Ramadhan2025.jpg', 'photobook', '2026-05-07 09:09:45'),
+(130, 'Photobook Ramadhan 2026', 'Photobook_Ramadhan2026.jpg', 'photobook', '2026-05-07 09:10:13'),
+(131, 'Khabesa Team Pession', 'KhabesaTeamPession.jpg', 'photobook', '2026-05-07 09:10:42'),
+(132, 'Photobook Kids Day', 'Photobook_KidsDay.jpg', 'photobook', '2026-05-07 09:11:11'),
+(133, 'Off Air', 'OffAir1.jpg', 'on_offair', '2026-05-08 08:04:59'),
+(134, 'Off Air Gen 12', 'OffAir2.jpg', 'on_offair', '2026-05-08 08:05:20'),
+(135, 'Off Air Gen 12 (2)', 'OffAir3.jpg', 'on_offair', '2026-05-08 08:05:51'),
+(136, 'off air', 'OffAir4.jpg', 'on_offair', '2026-05-08 08:06:15'),
+(137, 'off air 2', 'OffAir5.jpg', 'on_offair', '2026-05-08 08:06:35'),
+(138, 'off air 3', 'OffAir6.jpg', 'on_offair', '2026-05-08 08:06:54'),
+(139, 'off air 4', 'OffAir7.jpg', 'on_offair', '2026-05-08 08:07:12'),
+(140, 'off air 5', 'OffAir8.jpg', 'on_offair', '2026-05-08 08:07:52'),
+(141, 'off air 6', 'OffAir9.jpg', 'on_offair', '2026-05-08 08:08:14'),
+(143, 'on air', 'OnAir2.jpg', 'on_offair', '2026-05-08 08:08:51'),
+(144, 'on air gen 12', 'OnAir1.jpg', 'on_offair', '2026-05-08 08:09:41'),
+(145, 'on air gen 12 (2)', 'OnAir4.jpg', 'on_offair', '2026-05-08 08:10:09'),
+(146, 'on air gen 12 (3)', 'OnAir5.jpg', 'on_offair', '2026-05-08 08:10:32'),
+(147, 'on air gen 12 (4)', 'OnAir3.jpg', 'on_offair', '2026-05-08 08:10:58'),
+(148, 'Random', 'daily32.jpg', 'daily', '2026-05-10 06:50:55'),
+(149, 'Cafe', 'daily33.jpg', 'daily', '2026-05-10 06:51:32'),
+(150, 'Bioskop', 'daily34.jpg', 'daily', '2026-05-10 06:51:57'),
+(151, 'Cafe', 'daily35.jpg', 'daily', '2026-05-10 06:52:41'),
+(152, 'Hijab', 'daily36.jpg', 'daily', '2026-05-10 06:53:11'),
+(153, 'Cafe', 'daily37.jpg', 'daily', '2026-05-10 06:53:36'),
+(154, 'Cafe', 'daily38.jpg', 'daily', '2026-05-10 06:53:52'),
+(155, 'Cafe', 'daily39.jpg', 'daily', '2026-05-10 06:54:11'),
+(156, 'IDN', 'daily40.jpg', 'daily', '2026-05-10 06:54:35'),
+(157, 'Cafe', 'daily41.jpg', 'daily', '2026-05-10 06:55:04'),
+(158, 'Random', 'daily42.jpg', 'daily', '2026-05-10 06:55:28'),
+(159, 'Random', 'daily43.jpg', 'daily', '2026-05-10 06:55:55'),
+(160, 'Konser', 'daily44.jpg', 'daily', '2026-05-10 06:56:56'),
+(161, 'Bunga', 'daily45.jpg', 'daily', '2026-05-10 06:57:22'),
+(162, 'Seragam', 'daily46.jpg', 'daily', '2026-05-10 07:18:07'),
+(163, 'Bunga', '47.jpg', 'daily', '2026-05-10 07:18:26'),
+(164, 'Mirror', '48.jpg', 'daily', '2026-05-10 07:18:41'),
+(165, 'Lari', '49.jpg', 'daily', '2026-05-10 07:18:57'),
+(166, 'Pantai', '50.jpg', 'daily', '2026-05-10 07:19:20'),
+(167, 'Konser', '51.jpg', 'daily', '2026-05-10 07:19:40'),
+(168, 'Mirror', '52.jpg', 'daily', '2026-05-10 07:19:58'),
+(169, 'Hijab', '53.jpg', 'daily', '2026-05-10 07:20:10'),
+(170, 'Baju bola', '54.jpg', 'daily', '2026-05-10 07:20:33'),
+(171, 'Cafe', '55.jpg', 'daily', '2026-05-10 07:20:49'),
+(172, 'Konser', '56.jpg', 'daily', '2026-05-10 07:21:04'),
+(173, 'Malam', '57.jpg', 'daily', '2026-05-10 07:21:56'),
+(174, 'Cafe', '58.jpg', 'daily', '2026-05-10 07:22:12'),
+(175, 'Piano', '59.jpg', 'daily', '2026-05-10 07:22:33'),
+(176, 'Rahasia', '60.jpg', 'daily', '2026-05-10 07:22:54'),
+(177, 'Kucing', '61.jpg', 'daily', '2026-05-10 07:23:12'),
+(178, 'Kacamata', '62.jpg', 'daily', '2026-05-10 07:24:09'),
+(179, 'Random', '63.jpg', 'daily', '2026-05-10 07:24:41'),
+(180, 'Sholat ID', '64.jpg', 'daily', '2026-05-10 07:25:06'),
+(181, 'lomba 17 agustus', '65.jpg', 'daily', '2026-05-10 07:25:30'),
+(182, 'Pantai', '66.jpg', 'daily', '2026-05-10 07:25:59'),
+(183, 'Cafe', '67.jpg', 'daily', '2026-05-10 07:26:16'),
+(184, 'Jaket', '69.jpg', 'daily', '2026-05-10 07:26:35'),
+(185, 'Rahasia', '70.jpg', 'daily', '2026-05-10 07:27:00'),
+(186, 'Lari', '71.jpg', 'daily', '2026-05-10 07:27:16'),
+(187, 'Cafe', '72.jpg', 'daily', '2026-05-10 07:27:30'),
+(188, 'Off air', '73.jpg', 'daily', '2026-05-10 07:27:50'),
+(189, 'Dasi', '74.jpg', 'daily', '2026-05-10 07:28:08'),
+(190, 'Photo studio', '75.jpg', 'daily', '2026-05-10 07:28:29'),
+(191, 'Konser', '76.jpg', 'daily', '2026-05-10 07:28:48'),
+(192, 'Mobil', '77.jpg', 'daily', '2026-05-10 07:29:03'),
+(193, 'Random', '78.jpg', 'daily', '2026-05-10 07:29:20'),
+(194, 'Cafe', '79.jpg', 'daily', '2026-05-10 07:29:41'),
+(195, 'Cafe 2', '80.jpg', 'daily', '2026-05-10 07:30:00'),
+(196, 'Cafe 3', '81.jpg', 'daily', '2026-05-10 07:30:16'),
+(197, 'Cafe 4', '82.jpg', 'daily', '2026-05-10 07:30:41'),
+(198, 'Cafe 5', '83.jpg', 'daily', '2026-05-10 07:31:00'),
+(199, 'Off air', '27.jpg', 'fancam', '2026-05-10 07:43:12'),
+(200, 'On air', '28.jpg', 'fancam', '2026-05-10 07:43:29'),
+(201, 'Theater', '29.jpg', 'fancam', '2026-05-10 07:43:48'),
+(203, 'On air', '31.jpg', 'fancam', '2026-05-10 07:44:32'),
+(204, 'Off air', '32.jpg', 'fancam', '2026-05-10 07:44:51'),
+(205, 'Bandara', '30.jpg', 'fancam', '2026-05-10 07:45:13'),
+(206, 'Off air', '33.jpg', 'fancam', '2026-05-10 07:46:00'),
+(207, 'Theater', '34.jpg', 'fancam', '2026-05-10 07:46:21'),
+(208, 'Bandara', '35.jpg', 'fancam', '2026-05-10 07:46:41'),
+(209, 'Off air', '36.jpg', 'fancam', '2026-05-10 07:47:01'),
+(211, 'Bandara', '38.jpg', 'fancam', '2026-05-10 07:47:40'),
+(212, 'Off air', '39.jpg', 'fancam', '2026-05-10 07:48:03'),
+(213, 'Konser', '40.jpg', 'fancam', '2026-05-10 07:48:30'),
+(214, 'on air', '41.jpg', 'fancam', '2026-05-10 07:48:47'),
+(215, 'OFC', '42.jpg', 'fancam', '2026-05-10 07:49:05'),
+(216, 'Off air', '43.jpg', 'fancam', '2026-05-10 07:49:22'),
+(217, 'On air', '44.jpg', 'fancam', '2026-05-10 07:49:39'),
+(218, 'Off air', '45.jpg', 'fancam', '2026-05-10 07:49:58'),
+(219, 'Bandara', '46.jpg', 'fancam', '2026-05-10 07:50:25'),
+(220, 'Off air', '47.jpg', 'fancam', '2026-05-10 07:50:43'),
+(221, 'Off air', '48.jpg', 'fancam', '2026-05-10 07:50:59'),
+(222, 'Erine-Aralie', 'erine aralie (3).jpg', 'friends', '2026-05-11 01:17:39'),
+(223, 'Erine-Aralie', 'erine aralie (4).jpg', 'friends', '2026-05-11 01:18:40'),
+(224, 'Erine-Aralie', 'erine aralie.jpg', 'friends', '2026-05-11 01:19:04'),
+(225, 'Erine-Aralie', 'erine arlie (2).jpg', 'friends', '2026-05-11 01:19:26'),
+(226, 'Erine-Atin', 'erine atin.jpg', 'friends', '2026-05-11 01:19:44'),
+(227, 'Erine-Ce pio', 'erine ce pio.jpg', 'friends', '2026-05-11 01:20:03'),
+(228, 'Erine-Cellie', 'erine cellie.jpg', 'friends', '2026-05-11 01:20:22'),
+(229, 'Erine-Ci gre', 'erine ci gre.jpg', 'friends', '2026-05-11 01:20:40'),
+(230, 'Erine-Delynn', 'erine delynn (2).jpg', 'friends', '2026-05-11 01:21:00'),
+(231, 'Erine-Delynn', 'erine delynn.jpg', 'friends', '2026-05-11 01:21:24'),
+(232, 'Erine-Eli', 'erine eli.jpg', 'friends', '2026-05-11 01:21:44'),
+(233, 'Erine-Ella', 'erine ella.jpg', 'friends', '2026-05-11 01:22:02'),
+(234, 'Erine-Fritzy', 'erine fritzy (2).jpg', 'friends', '2026-05-11 01:22:29'),
+(235, 'Erine-Fritzy', 'erine fritzy.jpg', 'friends', '2026-05-11 01:22:48'),
+(236, 'Erine-Icel', 'erine icel.jpg', 'friends', '2026-05-11 01:23:17'),
+(237, 'Erine-Indira', 'erine indira.jpg', 'friends', '2026-05-11 01:23:40'),
+(238, 'Erine-Jessi', 'erine jessi.jpg', 'friends', '2026-05-11 01:24:11'),
+(239, 'Erine-Indah', 'erine ka indah.jpg', 'friends', '2026-05-11 01:24:33'),
+(240, 'Erine-Lana', 'erine lana (2).jpg', 'friends', '2026-05-11 01:24:52'),
+(241, 'Erine-Lana', 'erine lana.jpg', 'friends', '2026-05-11 01:25:16'),
+(242, 'Erine-Levi-Nachia-Trisha', 'erine levi nachia trisha.jpg', 'friends', '2026-05-11 01:25:45'),
+(243, 'Erine-Levi', 'erine levi.jpg', 'friends', '2026-05-11 01:26:03'),
+(244, 'Erine-Lily', 'erine lily.jpg', 'friends', '2026-05-11 01:26:22'),
+(245, 'Erine-Marsha', 'erine marsha (2).jpg', 'friends', '2026-05-11 01:26:46'),
+(246, 'Erine-Marsha', 'erine marsha.jpg', 'friends', '2026-05-11 01:27:28'),
+(248, 'Erine-Nala', 'erine nala (2).jpg', 'friends', '2026-05-11 01:28:21'),
+(249, 'Erine-Nachia', 'erine nachia.jpg', 'friends', '2026-05-11 01:29:03'),
+(250, 'Erine-Nala', 'erine nala.jpg', 'friends', '2026-05-11 01:29:26'),
+(251, 'Erine-Nayla', 'erine nayla.jpg', 'friends', '2026-05-11 01:29:49'),
+(252, 'Erine-Oline-Trisha', 'erine oline trisha.jpg', 'friends', '2026-05-11 01:30:15'),
+(253, 'Erine-Regie-Nala-Kimmy', 'erine regie nala kimmy (2).jpg', 'friends', '2026-05-11 01:30:47'),
+(254, 'Erine-Regie-Nala-Kimmy', 'erine regie nala kimmy.jpg', 'friends', '2026-05-11 01:31:13'),
+(255, 'Erine-Oline', 'erine oline (2).jpg', 'friends', '2026-05-11 01:31:32'),
+(256, 'Erine-Oline', 'erine oline.jpg', 'friends', '2026-05-11 01:31:51'),
+(257, 'Erine-Regie', 'erine regie.jpg', 'friends', '2026-05-11 01:32:10'),
+(258, 'Erine-Ribka-Nala-Delynn', 'erine ribka nala delynn.jpg', 'friends', '2026-05-11 01:32:40'),
+(259, 'Erine-Ribka', 'erine ribka.jpg', 'friends', '2026-05-11 01:33:08'),
+(260, 'Erine-Shasa', 'erine shasa.jpg', 'friends', '2026-05-11 01:33:27'),
+(261, 'Gen 12 (4)', 'gen 12 (4).jpg', 'friends', '2026-05-11 01:34:06'),
+(262, 'Gen 12 (5)', 'gen 12 (5).jpg', 'friends', '2026-05-11 01:34:28'),
+(263, 'Gen 12 (6)', 'gen 12 (6).jpg', 'friends', '2026-05-11 01:34:51'),
+(264, 'TWT', 'twt.jpg', 'friends', '2026-05-11 01:35:12'),
+(265, 'Gen 12', 'gen 12.jpg', 'friends', '2026-05-11 01:35:30'),
+(266, 'gen 12 (16)', 'gen 12 (16).jpg', 'friends', '2026-05-11 01:35:52'),
+(267, 'gen 12 (15)', 'gen 12 (15).jpg', 'friends', '2026-05-11 01:36:17'),
+(268, 'gen 12 (14)', 'gen 12 (14).jpg', 'friends', '2026-05-11 01:37:20'),
+(269, 'gen 12 (13)', 'gen 12 (13).jpg', 'friends', '2026-05-11 01:39:12'),
+(270, 'gen 12 (12)', 'gen 12 (12).jpg', 'friends', '2026-05-11 01:39:40'),
+(271, 'gen 12(11)', 'gen 12 (11).jpg', 'friends', '2026-05-11 01:40:10'),
+(272, 'gen 12 (10)', 'gen 12 (10).jpg', 'friends', '2026-05-11 01:40:40'),
+(273, 'gen 12 (9)', 'gen 12 (9).jpg', 'friends', '2026-05-11 01:41:09'),
+(274, 'gen 12 (8)', 'gen 12 (8).jpg', 'friends', '2026-05-11 01:41:39'),
+(275, 'gen 12 (7)', 'gen 12 (7).jpg', 'friends', '2026-05-11 01:42:07'),
+(279, 'gen 12 (2)', 'gen 12 (2).jpg', 'friends', '2026-05-11 01:44:08'),
+(280, 'gen 12 (3)', 'gen 12 (3).jpg', 'friends', '2026-05-11 01:44:42'),
+(281, 'Trio Dugong', 'trio dugong.jpg', 'friends', '2026-05-11 01:45:05');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `gallery`
+--
+ALTER TABLE `gallery`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `gallery`
+--
+ALTER TABLE `gallery`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=282;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
